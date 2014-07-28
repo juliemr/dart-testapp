@@ -1,0 +1,28 @@
+ <div>
+  <div>
+    <button ng-click="slow.slowHttp()">
+      http
+    </button>
+    <span>{{slow.slowHttpStatus}}</span>
+  </div>
+  
+  <div>
+    <button ng-click="slow.slowFunction()">
+      function
+    </button>
+    <span>{{slow.slowFunctionStatus}}</span>
+  </div>
+ 
+  <div>
+    <button ng-click="slow.slowTimer()">
+      Timer
+    </button>
+    <span>{{slow.slowTimerStatus}}</span>
+  </div>
+  <div>
+    <button ng-click="slow.slowView()">
+      View
+    </button>
+    <ng-view></ng-view>
+  </div>
+</div>
