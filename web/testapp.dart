@@ -22,9 +22,9 @@ slowRouteInitializer(Router router, RouteViewFactory views) {
 class TestAppModule extends Module {
   TestAppModule() {
     bind(SlowComponent);
-    value(RouteInitializerFn, slowRouteInitializer);
-    factory(NgRoutingUsePushState,
-            (_) => new NgRoutingUsePushState.value(false));
+    bind(RouteInitializerFn, toValue: slowRouteInitializer);
+    bind(NgRoutingUsePushState,
+            toFactory: (_) => new NgRoutingUsePushState.value(false));
   }
 }
 
