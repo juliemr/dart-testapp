@@ -23,6 +23,8 @@ class TestAppModule extends Module {
   TestAppModule() {
     bind(SlowComponent);
     value(RouteInitializerFn, slowRouteInitializer);
+    factory(NgRoutingUsePushState,
+            (_) => new NgRoutingUsePushState.value(false));
   }
 }
 
