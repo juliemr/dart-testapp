@@ -17,7 +17,7 @@ void _serveRequest (HttpRequest request) {
 }
 
 void main() {
-  HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 8095).then((server) {
+  HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 8095).then((HttpServer server) {
     print('Server listening at port ${server.port}');
     server.listen(_serveRequest);
   });
