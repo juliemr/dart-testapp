@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:html';
 
 import 'package:angular/angular.dart';
 import 'package:angular/application_factory.dart';
@@ -24,7 +23,7 @@ class TestAppModule extends Module {
     bind(SlowComponent);
     bind(RouteInitializerFn, toValue: slowRouteInitializer);
     bind(NgRoutingUsePushState,
-            toFactory: (_) => new NgRoutingUsePushState.value(false));
+            toValue: new NgRoutingUsePushState.value(false));
   }
 }
 
