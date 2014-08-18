@@ -50,3 +50,4 @@ class SlowComponent {
     _routeHelper.router.go('pending', {});
   }
 }
+

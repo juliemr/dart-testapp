@@ -1,16 +1,15 @@
 import 'dart:async';
-import 'dart:html';
 
 import 'package:angular/angular.dart';
 import 'package:angular/application_factory.dart';
-import 'slow_component.dart' show SlowComponent;
+import 'package:testapp/slow_component.dart' show SlowComponent;
 
 slowRouteInitializer(Router router, RouteViewFactory views) {
   views.configure({
-    'before': ngRoute(path: '/before', view: 'views/before.html'),
-    'pending': ngRoute(path: '/pending', view: 'views/pending.html',
+    'before': ngRoute(path: '/before', view: 'packages/testapp/views/before.html'),
+    'pending': ngRoute(path: '/pending', view: 'packages/testapp/views/pending.html',
         enter: (RouteEnterEvent e) => router.go('finished', {})),
-    'finished': ngRoute(path: '/finished', view: 'views/finished.html', preEnter: (RoutePreEnterEvent e) {
+    'finished': ngRoute(path: '/finished', view: 'packages/testapp/views/finished.html', preEnter: (RoutePreEnterEvent e) {
       Completer completer = new Completer();
       e.allowEnter(completer.future);
       new Timer(const Duration(seconds: 2), () => completer.complete(true));
@@ -24,7 +23,7 @@ class TestAppModule extends Module {
     bind(SlowComponent);
     bind(RouteInitializerFn, toValue: slowRouteInitializer);
     bind(NgRoutingUsePushState,
-            toFactory: (_) => new NgRoutingUsePushState.value(false));
+            toValue: new NgRoutingUsePushState.value(false));
   }
 }
 

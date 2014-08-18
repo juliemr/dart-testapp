@@ -4,11 +4,14 @@ packages:
   analyzer:
     description: analyzer
     source: hosted
-    version: "0.13.6"
+    version: "0.18.0"
   angular:
-    description: angular
-    source: hosted
-    version: "0.12.0"
+    description:
+      ref: master
+      resolved-ref: e2350cac61dc33053504c70be4d1d5411e0f2040
+      url: "git://github.com/angular/angular.dart"
+    source: git
+    version: "0.14.0"
   args:
     description: args
     source: hosted
@@ -24,7 +27,7 @@ packages:
   code_transformers:
     description: code_transformers
     source: hosted
-    version: "0.1.4+1"
+    version: "0.1.6"
   collection:
     description: collection
     source: hosted
@@ -32,7 +35,7 @@ packages:
   di:
     description: di
     source: hosted
-    version: "0.0.40"
+    version: "2.0.1"
   html5lib:
     description: html5lib
     source: hosted
@@ -44,11 +47,15 @@ packages:
   intl:
     description: intl
     source: hosted
-    version: "0.9.10"
+    version: "0.8.10+4"
   logging:
     description: logging
     source: hosted
     version: "0.9.1+1"
+  meta:
+    description: meta
+    source: hosted
+    version: "0.8.8"
   mime:
     description: mime
     source: hosted
@@ -60,11 +67,11 @@ packages:
   perf_api:
     description: perf_api
     source: hosted
-    version: "0.0.8"
+    version: "0.0.9"
   route_hierarchical:
     description: route_hierarchical
     source: hosted
-    version: "0.4.21"
+    version: "0.4.22"
   source_maps:
     description: source_maps
     source: hosted
@@ -73,11 +80,11 @@ packages:
     description: stack_trace
     source: hosted
     version: "0.9.3+2"
+  typed_mock:
+    description: typed_mock
+    source: hosted
+    version: "0.0.4"
   utf:
     description: utf
     source: hosted
     version: "0.9.0"
-  web_components:
-    description: web_components
-    source: hosted
-    version: "0.3.5+1"

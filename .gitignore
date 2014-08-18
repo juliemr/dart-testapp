@@ -1,2 +1,4 @@
 build/
 packages/
+lib/views/packages/
+web/packages/
