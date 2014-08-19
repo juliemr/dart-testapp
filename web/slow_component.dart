@@ -10,10 +10,10 @@ String _FINISHED = 'finished';
 
 @Component(
     selector: 'slowstuff',
-    templateUrl: 'slow_component.html',
-    publishAs: 'slow'
+    templateUrl: 'slow_component.html'
 )
 class SlowComponent {
+  final String slow;
   final Http _http;
   final NgRoutingHelper _routeHelper;
   
@@ -22,7 +22,9 @@ class SlowComponent {
   String slowTimerStatus = _NOT_STARTED;
   String slowViewStatus = _NOT_STARTED;
   
-  SlowComponent(this._http, this._routeHelper);
+  SlowComponent(this._http, this._routeHelper) {
+    slow = this;
+  }
   
   void slowHttp() {
     slowHttpStatus = _PENDING;
